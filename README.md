@@ -15,3 +15,5 @@
 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 
 [Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/)
+
+[git workflow tutorial](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
