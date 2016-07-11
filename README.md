@@ -6,3 +6,12 @@
 [Pro Git](https://git-scm.com/book/en/v2)：适合有一定基础的同学。
 
 [merging vs rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/)
+
+
+### Git Workflow
+
+[Workflows with git-flow](https://www.git-tower.com/learn/git/ebook/en/mac/advanced-topics/git-flow)
+
+[A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+
+[Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/)
