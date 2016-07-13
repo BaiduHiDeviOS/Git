@@ -43,6 +43,15 @@ $ git commit --amend //修改上次commit, do not amend your last commit if you 
 
 ```
 
+#### git merge
+```bash
+
+$ git merge [branch name]
+
+禁用fast forward merge
+$ git merge --no-ff -m "comment" branch_name
+```
+
 #### git log
 ```bash
 $ git log -p -2 //查看每次提交的diff
@@ -143,4 +152,13 @@ $ git reset --hard //update working copy
 
 //squashing
 $ git reset --soft HEAD~2
+```
+
+
+#### git rm
+```bash
+$ git rm [filename]
+
+//keep the file in your working tree but remove it from your staging area.
+$ git rm --cached filename
 ```
