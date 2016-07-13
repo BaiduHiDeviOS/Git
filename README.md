@@ -52,6 +52,7 @@ $ git merge [branch name]
 $ git merge --no-ff -m "comment" branch_name
 ```
 
+
 #### git log
 ```bash
 $ git log -p -2 //查看每次提交的diff
@@ -161,4 +162,20 @@ $ git rm [filename]
 
 //keep the file in your working tree but remove it from your staging area.
 $ git rm --cached filename
+```
+
+#### git tag
+```bash
+打标签,tag默认在本地，必须显示的push到服务器
+$ git tag v1.0
+$ git tag v0.9 commit-id
+$ git tag -a v0.1 -m "version 0.1 released" commit-id
+$ git push origin v1.0 //推送标签到远程服务器
+$ git push origin --tags //一次性推送全部尚未推送到远程的本地标签
+
+//删除标签
+//1.删除本地
+$ git tag -d v0.9
+//2.推送到远程
+$ git push origin :refs/tags/v0.9
 ```
