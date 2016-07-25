@@ -19,6 +19,14 @@
 
 [git workflow tutorial](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
 
+### Git and Xcode
+
+[Versioning with Xcode and git](https://fuller.li/posts/versioning-with-xcode-and-git/): Using a script in your build phase, you can run a shell to determine the version number and inject this into the Info.plist of a build. It will never modify your local project, just the created build.
+
+[Xcode Git ignore](https://github.com/github/gitignore/blob/master/Global/Xcode.gitignore)
+
+[gitignore](https://www.gitignore.io/): 生成各种gitignore
+
 
 ### Git 命令快速查询
 
