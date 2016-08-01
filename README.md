@@ -8,6 +8,9 @@
 
 [merging vs rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/)
 
+[git recipes](https://github.com/geeeeeeeeek/git-recipes): :octocat: Git recipes in Chinese. 高质量的Git中文教程.
+
+
 
 ### Git Workflow
 
