@@ -10,7 +10,7 @@
 
 [git recipes](https://github.com/geeeeeeeeek/git-recipes): :octocat: Git recipes in Chinese. 高质量的Git中文教程.
 
-
+[some git summary](http://hujiaweibujidao.github.io/blog/2016/08/02/some-git-summary/)
 
 ### Git Workflow
 
