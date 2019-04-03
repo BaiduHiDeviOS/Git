@@ -18,6 +18,8 @@
 
 [Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 
+[Github Help](https://help.github.com/en)
+
 ### Git Workflow
 
 [Workflows with git-flow](https://www.git-tower.com/learn/git/ebook/en/mac/advanced-topics/git-flow)
