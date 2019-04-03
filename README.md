@@ -1,5 +1,9 @@
 ## 参考资料
 
+### [Open Source Guides](https://opensource.guide/)
+
+
+
 ### Git教程
 
 [廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000): 入门和快速上手
@@ -201,18 +205,18 @@ you can search through any tree in Git, not just the working directory.
 
 ```bash
 // print out the line numbers where Git has found matches.
-git grep -n/--line-number
+$ git grep -n/--line-number
 
 // summarize the output by showing you only which files contained 
 // the search string and how many matches there were in each file
-git grep -c/--count
+$ git grep -c/--count
 
 // display the enclosing method or function for each matching
 // string with either of the -p or --show-function options
-git grep -p self.window
+$ git grep -p self.window
 
 // ensures that multiple matches must occur in the same linie of text.
-git grep --break --heading \
+$ git grep --break --heading \
 -n -e '#define' --and \( -e LINK -e BUF_MAX\) v1.8.0
 ```
 
@@ -222,12 +226,12 @@ git grep --break --heading \
 ```git bisect``` use binary search to find the commit that introduced a bug.
 
 ```bash
-git bisect start
+$ git bisect start
 // Current version is bad
 git bisect bad
 
 // v2.6.13-rc2 is known to be good
-git bisect good v2.6.13-rc2
+$ git bisect good v2.6.13-rc2
 ```
 
 Once you have specified at least one bad and one good commit, ```git bisect``` selects a commit in the middle
@@ -235,15 +239,15 @@ of that range of history, checks it out.
 
 You sholud now compile the checked-out version and test it. If that version works correctly, type
 ```bash
-git bisect good
+$ git bisect good
 ```
 
 If that version is broken type
 ```bash
-git bisect bad
+$ git bisect bad
 ```
 
 reset
 ```bash
-git bisect reset
+$ git bisect reset
 ```
