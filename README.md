@@ -16,6 +16,8 @@
 
 [some git summary](http://hujiaweibujidao.github.io/blog/2016/08/02/some-git-summary/)
 
+[Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
+
 ### Git Workflow
 
 [Workflows with git-flow](https://www.git-tower.com/learn/git/ebook/en/mac/advanced-topics/git-flow)
