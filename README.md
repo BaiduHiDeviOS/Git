@@ -254,3 +254,11 @@ reset
 ```bash
 $ git bisect reset
 ```
+
+#### Squash all commits related to a single issue into a single commit
+
+```bash
+$ git rebase -i HEAD~4 // To squash four commits into one
+// commit, then change 'pick' -> 'squash' next to the commmits you want to squash
+```
+
