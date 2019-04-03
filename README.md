@@ -192,3 +192,58 @@ $ git tag -d v0.9
 //2.推送到远程
 $ git push origin :refs/tags/v0.9
 ```
+
+#### [git grep](https://git-scm.com/docs/git-grep)
+
+```git grep``` will look through the files in your working directory.
+you can search through any tree in Git, not just the working directory.
+
+
+```bash
+// print out the line numbers where Git has found matches.
+git grep -n/--line-number
+
+// summarize the output by showing you only which files contained 
+// the search string and how many matches there were in each file
+git grep -c/--count
+
+// display the enclosing method or function for each matching
+// string with either of the -p or --show-function options
+git grep -p self.window
+
+// ensures that multiple matches must occur in the same linie of text.
+git grep --break --heading \
+-n -e '#define' --and \( -e LINK -e BUF_MAX\) v1.8.0
+```
+
+
+#### [git bisect](https://git-scm.com/docs/git-bisect)
+
+```git bisect``` use binary search to find the commit that introduced a bug.
+
+```bash
+git bisect start
+// Current version is bad
+git bisect bad
+
+// v2.6.13-rc2 is known to be good
+git bisect good v2.6.13-rc2
+```
+
+Once you have specified at least one bad and one good commit, ```git bisect``` selects a commit in the middle
+of that range of history, checks it out.
+
+You sholud now compile the checked-out version and test it. If that version works correctly, type
+```bash
+git bisect good
+```
+
+If that version is broken type
+```bash
+git bisect bad
+```
+
+reset
+```bash
+git bisect reset
+```
