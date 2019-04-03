@@ -73,11 +73,14 @@ $ git merge --no-ff -m "comment" branch_name
 #### git log
 ```bash
 $ git log -p -2 //查看每次提交的diff
+$ git log --stat // summary of the information
+$ git log --pretty=oneline // prints each commit on a single line
+$ git log --pretty=format:"%h - %an, %ar : %s" //Abbreviated commit hash - Author name, Author date : Subject
 $ git log --since=2.weeks
 $ git log --author=AnYuan
 $ git log --grep=keywords
 $ git log --oneline --decorate // show you where the branch pointers are pointing.
-
+$ git log -S function_name // only show commits adding or removing code matching the string.
 
 //this command shows you any commits in your current branch that are not in
 //the master branch on your origin remote.
