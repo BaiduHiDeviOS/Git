@@ -262,3 +262,11 @@ $ git rebase -i HEAD~4 // To squash four commits into one
 // commit, then change 'pick' -> 'squash' next to the commmits you want to squash
 ```
 
+#### [Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+```bash
+$ git submodule add [url]
+$ git submodule init // cloning a project with submodules
+$ git submodule update --remote --merge // fetch all the data from subproject
+$ git submodule foreach 'git stash' // run arbitrary command in each submodule
+```
