@@ -1,5 +1,9 @@
 ## 参考资料
 
+### [Open Source Guides](https://opensource.guide/)
+
+
+
 ### Git教程
 
 [廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000): 入门和快速上手
@@ -11,6 +15,10 @@
 [git recipes](https://github.com/geeeeeeeeek/git-recipes): :octocat: Git recipes in Chinese. 高质量的Git中文教程.
 
 [some git summary](http://hujiaweibujidao.github.io/blog/2016/08/02/some-git-summary/)
+
+[Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
+
+[Github Help](https://help.github.com/en)
 
 ### Git Workflow
 
@@ -69,11 +77,14 @@ $ git merge --no-ff -m "comment" branch_name
 #### git log
 ```bash
 $ git log -p -2 //查看每次提交的diff
+$ git log --stat // summary of the information
+$ git log --pretty=oneline // prints each commit on a single line
+$ git log --pretty=format:"%h - %an, %ar : %s" //Abbreviated commit hash - Author name, Author date : Subject
 $ git log --since=2.weeks
 $ git log --author=AnYuan
 $ git log --grep=keywords
 $ git log --oneline --decorate // show you where the branch pointers are pointing.
-
+$ git log -S function_name // only show commits adding or removing code matching the string.
 
 //this command shows you any commits in your current branch that are not in
 //the master branch on your origin remote.
@@ -191,4 +202,75 @@ $ git push origin --tags //一次性推送全部尚未推送到远程的本地�
 $ git tag -d v0.9
 //2.推送到远程
 $ git push origin :refs/tags/v0.9
+```
+
+#### [git grep](https://git-scm.com/docs/git-grep)
+
+```git grep``` will look through the files in your working directory.
+you can search through any tree in Git, not just the working directory.
+
+
+```bash
+// print out the line numbers where Git has found matches.
+$ git grep -n/--line-number
+
+// summarize the output by showing you only which files contained 
+// the search string and how many matches there were in each file
+$ git grep -c/--count
+
+// display the enclosing method or function for each matching
+// string with either of the -p or --show-function options
+$ git grep -p self.window
+
+// ensures that multiple matches must occur in the same linie of text.
+$ git grep --break --heading \
+-n -e '#define' --and \( -e LINK -e BUF_MAX\) v1.8.0
+```
+
+
+#### [git bisect](https://git-scm.com/docs/git-bisect)
+
+```git bisect``` use binary search to find the commit that introduced a bug.
+
+```bash
+$ git bisect start
+// Current version is bad
+git bisect bad
+
+// v2.6.13-rc2 is known to be good
+$ git bisect good v2.6.13-rc2
+```
+
+Once you have specified at least one bad and one good commit, ```git bisect``` selects a commit in the middle
+of that range of history, checks it out.
+
+You sholud now compile the checked-out version and test it. If that version works correctly, type
+```bash
+$ git bisect good
+```
+
+If that version is broken type
+```bash
+$ git bisect bad
+```
+
+reset
+```bash
+$ git bisect reset
+```
+
+#### Squash all commits related to a single issue into a single commit
+
+```bash
+$ git rebase -i HEAD~4 // To squash four commits into one
+// commit, then change 'pick' -> 'squash' next to the commmits you want to squash
+```
+
+#### [Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+```bash
+$ git submodule add [url]
+$ git submodule init // cloning a project with submodules
+$ git submodule update --remote --merge // fetch all the data from subproject
+$ git submodule foreach 'git stash' // run arbitrary command in each submodule
 ```
